@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar class="new-background-color">
+        <ion-buttons slot="start">
+        <ion-button (click)="back()" slot="icon-only">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+        <ion-title>
+        {{titles [globalService.getRequestsType()]}} {{globalService.getItem().id}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">
+                <ion-row class="r-row">
+                    <ion-label class="r-data">CONFIRM DELIVERY</ion-label>            
+                </ion-row>
+                <ion-item>
+                    <ion-label class="r-paper">ITEMS</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-col>        
+    </ion-row>
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">   
+                <ion-row class="r-row">
+                    <ion-label class="r-data">Printing Papers 5              […]</ion-label>            
+                </ion-row>
+                <ion-item>
+                    <ion-label class="r-paper">Received 2. Outstanding 3. Cost R3</ion-label>            
+                </ion-item>                
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">
+                <ion-item>
+                    <ion-label class="r-paper">Printing Papers 5              […]</ion-label>            
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row class="r-div">
+        <ion-col class="r-button">
+            <ion-button shape="round" class="submit-btn" type="submit">RECEIVE</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

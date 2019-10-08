@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()" slot="icon-only">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{titles [globalService.getRequestsType()]}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid text-center>
+    <ion-row  *ngFor="let requestitem of globalService.getRequestsInfo()" class="r-div" (click)="showItem(requestitem.id)">      
+      <ion-row class="r-content">
+        <ion-col class="r-no" size="3">
+            <ion-label class="r-id">{{requestitem.id}}</ion-label>
+        </ion-col>
+        <ion-col class="r-con" size="6">
+          <ion-row class="r-row">
+            <ion-label class="logo_text">{{requestitem.title}}</ion-label>
+          </ion-row>
+          <ion-row class="r-row">
+            <ion-label class="logo_text">Supplier: {{requestitem.supplier}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-label class="logo_text">By: {{requestitem.by}}</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label class="logo_text">Dept: {{requestitem.dept}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row class="r-row">
+            <ion-label class="logo_text">Status: {{requestitem.status}}</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col class="r-img" size="3">
+            <img src="../../assets/logo1.png"/>
+        </ion-col>
+      </ion-row>
+      <ion-row class="r-date">
+          <ion-label class="r-date">Date: <ion-buttons>
+              <ion-button slot="icon-only">
+                <ion-icon class="r-calendar" name="calendar"></ion-icon>
+              </ion-button>
+            </ion-buttons> {{requestitem.date}}</ion-label>
+      </ion-row>    
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!-- { id:"REQ1001", supplier: "Wemasoft1", data:"12-01-19",by:"David",dept:"Fina", status:"xx" } -->
+<!-- REQ1001 Supplier: Wemasoft Date: 12-01-19 -->
+<!-- By: David Dept: Fina Status: XX R4350 -->

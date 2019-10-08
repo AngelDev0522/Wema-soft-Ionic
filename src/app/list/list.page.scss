@@ -1,0 +1,49 @@
+.new-background-color{
+    --background: #54d61c;
+    --color: white;
+}
+.r-div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 170px;
+
+}
+.r-content{
+    height: 130px;
+    background-color:#f5f4f4;
+    border: solid 1px lightGray;
+    width:100%;
+}
+.r-date{
+    height: 30px;
+    width:100%;
+    background-color:lightgray;
+}
+.r-no{
+    border: solid 1px lightGray;
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+    text-align: center!important;
+}
+.r-id{
+    width:100%;
+}
+.r-date{
+    border: solid 1px lightGray;
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+    padding-left: 10px;
+}
+.r-calendar{
+    color: #54d61c;
+}
+.r-row{
+    padding: 5px;
+}
+.r-img{
+    display: flex!important;
+    align-items: flex-end !important;
+    text-align: center!important;
+}

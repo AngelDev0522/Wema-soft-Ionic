@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar class="new-background-color">
+        <ion-buttons slot="start">
+        <ion-button (click)="back()" slot="icon-only">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        </ion-buttons>
+        <ion-title>
+        {{titles [globalService.getRequestsType()]}} {{globalService.getItem().id}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">   
+                <ion-row class="r-row">
+                    <ion-label class="r-data">STATUS: Approved</ion-label>            
+                </ion-row>
+                <ion-row class="r-row">
+                    <ion-label class="r-data">Type: {{titles [globalService.getRequestsType()]}}</ion-label>            
+                </ion-row>
+                <!-- { id:"REQ1001", supplier: "Wemasoft1", date:"12-01-19",by:"David",dept:"Fina", status:"xx" ,title:"R4350"}, -->
+                <ion-row class="r-row">
+                    <ion-label class="r-data">Department: {{globalService.getItem().dept}}</ion-label>            
+                </ion-row>
+                <ion-row class="r-row">
+                    <ion-label class="r-data">Requested By: {{globalService.getItem().by}}</ion-label>            
+                </ion-row>
+                <ion-row class="r-row">
+                    <ion-label class="r-data">Requested Date: {{globalService.getItem().date}}</ion-label>            
+                </ion-row>
+                <ion-row class="r-row">
+                    <ion-label class="r-data">Supplier: {{globalService.getItem().supplier}}</ion-label>            
+                </ion-row>
+                <ion-item>
+                    <ion-label class="r-paper">ITEMS</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-col>        
+    </ion-row>
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">   
+                <ion-item>
+                    <ion-label class="r-paper">Printing Papers 5      R500</ion-label>            
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row class="r-div">
+        <ion-col>
+            <ion-list inset class="logo">   
+                <ion-item>
+                    <ion-label class="r-paper">Printing Papers 5      R500</ion-label>            
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row class="r-div">
+        <ion-col class="r-button">
+            <ion-button (click)="receive()" shape="round" class="submit-btn" type="submit">APPROVE</ion-button>
+        </ion-col>
+        <ion-col class="r-button">
+            <ion-button shape="round" class="submit-btn" type="submit">REJECT</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

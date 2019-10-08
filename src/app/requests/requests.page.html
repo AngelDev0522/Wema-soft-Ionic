@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Requests</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row class="r-div" (click)="sendList(0)">
+        <ion-col>
+          <ion-list inset class="logo">   
+            <ion-label class="r-title">ORDER</ion-label>
+            <ion-item>
+              <ion-col>
+                <ion-label class="logo_text">{{ requestsStates[0].Pending }} Pending</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="logo_text">{{ requestsStates[0].Approved }} Approved</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="logo_text">{{ requestsStates[0].Denied }} Denied</ion-label>
+              </ion-col>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    <ion-row class="r-div" (click)="sendList(1)">
+        <ion-col>
+          <ion-list inset class="logo">   
+            <ion-label class="r-title">TRAVEL</ion-label>
+            <ion-item>
+              <ion-col>
+                <ion-label class="logo_text">{{ requestsStates[1].Pending }} Pending</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="logo_text">{{ requestsStates[1].Approved }} Approved</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-label class="logo_text">{{ requestsStates[1].Denied }} Denied</ion-label>
+              </ion-col>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    <ion-row class="r-div" (click)="sendList(2)">
+      <ion-col>
+        <ion-list inset class="logo">   
+          <ion-label class="r-title">EXPENSE</ion-label>
+          <ion-item>
+            <ion-col>
+              <ion-label class="logo_text">{{ requestsStates[2].Pending }} Pending</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label class="logo_text">{{ requestsStates[2].Approved }} Approved</ion-label>
+            </ion-col>
+            <ion-col>
+              <ion-label class="logo_text">{{ requestsStates[2].Denied }} Denied</ion-label>
+            </ion-col>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+</ion-content>
